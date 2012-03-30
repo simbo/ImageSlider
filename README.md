@@ -25,10 +25,11 @@ $('#myImageSlider').imageSlider();
 Or with some individual options:
 
 ```
-$('.image-slider').imageSlider({
+$('#myImageSlider').imageSlider({
 	animation: ['top right','top left','bottom left','bottom right'],
-	animationDuration: 1200,
-	displayDuration: 5000
+	animationDuration: 800,
+	displayDuration: 6000,
+	appearance: 'out'
 });
 ```
 
