@@ -48,7 +48,7 @@ $.fn.imageSlider = function( _options ) {
 						}
 					};
 					nav.find('.current').removeClass('current');
-					$(this).addClass('current');
+					$(this).blur().addClass('current');
 					if( options.appearance=='out' ) {
 						current = slides.filter(':visible').css('z-index',2);
 						next = slides.filter(':eq('+i+')').css({
