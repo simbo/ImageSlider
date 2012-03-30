@@ -1,9 +1,10 @@
 $(document).ready(function(){
 
 	$('.image-slider').imageSlider({
-		//animation: ['top right','top left','bottom left','bottom right'],
-		animationDuration: 1200,
-		displayDuration: 4000
+		animation: ['fade','right','top right','top','top left','left','bottom left','bottom','bottom right'],
+		animationDuration: 1000,
+		displayDuration: 3000,
+		appearance: 'out'
 	});
 
 });
