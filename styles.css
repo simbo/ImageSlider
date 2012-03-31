@@ -68,17 +68,33 @@ a img {
 	position:absolute;
 	bottom:20px;
 	right:20px;
-	font-size:50px;
-	letter-spacing:2px;
 	color:#fff;
 	text-shadow: 1px 1px 4px #000;
 	filter: dropshadow(color=#000, offx=1, offy=1);
 	opacity:.5;
+	max-width:400px;
+	text-align:right;
+	line-height:1.2em;
 }
 
 .image-slider div a:hover {
 	text-decoration:none;
 	opacity:1;
+}
+
+.image-slider div a em {
+	display:block;
+	letter-spacing:2px;
+	font-size:40px;
+	font-style:normal;
+}
+
+.image-slider div a span {
+	display:block;
+	margin:15px 4px -10px 0;
+	letter-spacing:1px;
+	font-size:12px;
+	font-weight:normal;
 }
 
 .image-slider ul,

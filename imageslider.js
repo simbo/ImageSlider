@@ -4,7 +4,8 @@ $.fn.imageSlider = function( _options ) {
 			animationDuration: 1200,
 			animation: 'fade',
 			appearance: 'in',
-			easing: 'swing'
+			easing: 'swing',
+			delimiter: '|'
 		}, _options==undefined ? {} : _options),
 		container = $(this),
 		width = container.width(),
@@ -31,11 +32,23 @@ $.fn.imageSlider = function( _options ) {
 		options.animation = animations[currentAnimation];
 	}
 	container.find('a').each(function(i){
-		var img = $(this).find('img').detach();
-		$(this).text( img.attr('title') ).wrap('<div/>').after(img);
+		var img = $(this).find('img').detach(),
+			title = img.attr('title'),
+			subtitle = '',
+			delimiterPosition = title!=undefined ? title.indexOf(options.delimiter) : -1;
+		if( delimiterPosition>0 ) {
+			subtitle = $.trim(title.substr(delimiterPosition+1));
+			title = $.trim(title.substr(0,delimiterPosition));
+		}
+		else
+			title = $.trim(title);
+		$(this).html('<em>'+title+'</em>').wrap('<div/>').after(img);
+		if( subtitle!='' )
+			$(this).append('<span>'+subtitle+'</span>');
+		img.attr('title','');
 		nav.append(
 			$('<li/>').append(
-				$('<a href="#"></a>').click(function(ev){
+				$('<a href="#" title="'+title+'"></a>').click(function(ev){
 					ev.preventDefault();
 					if( slides.filter(':animated').length>0 || slides.filter(':eq('+i+')').is(':visible') )
 						return;

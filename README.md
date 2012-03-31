@@ -49,6 +49,9 @@ $('#myImageSlider').imageSlider({
 	A string defining whether the next image should slide in or the current image should slide out.  
 	possible values: `in`, `out`  
 	default value: `in`
+* `delimiter`  
+	A string defining the delimiter to split title from subtitle.  
+	default value: `|`
 * `easing`  
 	A string defining the easing for the animation.  
 	default: `swing`
