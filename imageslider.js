@@ -89,52 +89,52 @@
 								if( options.appearance=='out' )
 									current.animate({top:-height,left:-width},aniOptions);
 								else
-									animated.css({top:-height,left:-width}).show().animate({top:0,left:0},aniOptions);
+									next.css({top:-height,left:-width}).show().animate({top:0,left:0},aniOptions);
 								break;
 							case 'bottom left':
 							case 'left bottom':
 								if( options.appearance=='out' )
 									current.animate({top:height,left:-width},aniOptions);
 								else
-									animated.css({top:height,left:-width}).show().animate({top:0,left:0},aniOptions);
+									next.css({top:height,left:-width}).show().animate({top:0,left:0},aniOptions);
 								break;
 							case 'bottom right':
 							case 'right bottom':
 								if( options.appearance=='out' )
 									current.animate({top:height,left:width},aniOptions);
 								else
-									animated.css({top:height,left:width}).show().animate({top:0,left:0},aniOptions);
+									next.css({top:height,left:width}).show().animate({top:0,left:0},aniOptions);
 								break;
 							case 'top':
 								if( options.appearance=='out' )
 									current.animate({top:-height},aniOptions);
 								else
-									animated.css('top',-height).show().animate({top:0},aniOptions);
+									next.css('top',-height).show().animate({top:0},aniOptions);
 								break;
 							case 'bottom':
 								if( options.appearance=='out' )
 									current.animate({top:height},aniOptions);
 								else
-									animated.css('top',height).show().animate({top:0},aniOptions);
+									next.css('top',height).show().animate({top:0},aniOptions);
 								break;
 							case 'left':
 								if( options.appearance=='out' )
 									current.animate({left:-width},aniOptions);
 								else
-									animated.css('left',-width).show().animate({left:0},aniOptions);
+									next.css('left',-width).show().animate({left:0},aniOptions);
 								break;
 							case 'right':
 								if( options.appearance=='out' )
 									current.animate({left:width},aniOptions);
 								else
-									animated.css('left',width).show().animate({left:0},aniOptions);
+									next.css('left',width).show().animate({left:0},aniOptions);
 								break;
 							case 'fade':
 							default:
 								if( options.appearance=='out' )
 									current.animate({opacity:0},aniOptions);
 								else
-									animated.css('opacity',0).show().animate({opacity:1},aniOptions);
+									next.css('opacity',0).show().animate({opacity:1},aniOptions);
 								break;
 						}
 						if( animations ) {
