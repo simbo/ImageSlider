@@ -1,10 +1,10 @@
 $.fn.imageSlider = function( _options ) {
 	var options = $.extend({
-			displayDuration: 4000,
-			animationDuration: 600,
-			easing: 'swing',
+			displayDuration: 5000,
+			animationDuration: 1200,
 			animation: 'fade',
-			appearance: 'in'
+			appearance: 'in',
+			easing: 'swing'
 		}, _options==undefined ? {} : _options),
 		container = $(this),
 		width = container.width(),
@@ -37,7 +37,7 @@ $.fn.imageSlider = function( _options ) {
 			$('<li/>').append(
 				$('<a href="#"></a>').click(function(ev){
 					ev.preventDefault();
-					if( slides.filter(':animated').length>=1 || slides.filter(':eq('+i+')').is(':visible') )
+					if( slides.filter(':animated').length>0 || slides.filter(':eq('+i+')').is(':visible') )
 						return;
 					var aniOptions = {
 						easing: options.easing,

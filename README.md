@@ -42,13 +42,13 @@ $('#myImageSlider').imageSlider({
 	A number of milliseconds how long an animation will run.  
 	default value: `1200`
 * `animation`  
-	A string or an array of strings defining the animation or list of animations.  
-	possible values: `fade`, `top`, `bottom`, `left`, `right`, `top left`, `top right`, `bottom left`, `bottom right`  
+	A string or an array of strings defining the animation or the list of animations.  
+	possible values: `fade`, `top`, `bottom`, `left`, `right`, `top left`, `top right`, `bottom left`, `bottom right`, `[...]`  
 	default value: `fade`
-* `easing`  
-	A string defining the easing for the animation.  
-	default: `swing`
 * `appearance`  
 	A string defining whether the next image should slide in or the current image should slide out.  
 	possible values: `in`, `out`  
 	default value: `in`
+* `easing`  
+	A string defining the easing for the animation.  
+	default: `swing`
